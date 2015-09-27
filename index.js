@@ -5,4 +5,5 @@ var BegetAPI = new require('./beget');
 
 var beget = new BegetAPI('somna', 'zSJbnFrj');
 
-beget.getAccountInfo();
+beget.user.getAccountInfo();
+beget.ftp.getList();

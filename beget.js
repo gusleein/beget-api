@@ -18,34 +18,16 @@ module.exports = function BegetAPI(login, password, params) {
     _params.login = _login;
     _params.password = _password;
 
-    var user = new require('./lib/user')(_params);
-    var backup = new require('./lib/backup')(_params);
-    var cron = new require('./lib/cron')(_params);
-    var dns = new require('./lib/dns')(_params);
-    var ftp = new require('./lib/ftp')(_params);
-    var mysql = new require('./lib/mysql')(_params);
-    var site = new require('./lib/site')(_params);
-    var domain = new require('./lib/domain')(_params);
-    var mail = new require('./lib/mail')(_params);
-    var stat = new require('./lib/stat')(_params);
-
-    /*  PUBLIC METHODS  */
-
-    /** user */
-    this.getAccountInfo = user.getAccountInfo;
-    this.toggleSsh = user.toggleSsh;
-
-    /** mail */
-    this.getMailboxList             = mail.getMailboxList;
-    this.changeMailboxPassword      = mail.changeMailboxPassword;
-    this.createMailbox              = mail.createMailbox;
-    this.dropMailbox                = mail.dropMailbox;
-    this.changeMailboxSettings      = mail.changeMailboxSettings;
-    this.forwardListAddMailbox      = mail.forwardListAddMailbox;
-    this.forwardListDeleteMailbox   = mail.forwardListDeleteMailbox;
-    this.forwardListShow            = mail.forwardListShow;
-    this.setDomainMail              = mail.setDomainMail;
-    this.clearDomainMail            = mail.clearDomainMail;
+    this.user = new require('./lib/user')(_params);
+    this.backup = new require('./lib/backup')(_params);
+    this.cron = new require('./lib/cron')(_params);
+    this.dns = new require('./lib/dns')(_params);
+    this.ftp = new require('./lib/ftp')(_params);
+    this.mysql = new require('./lib/mysql')(_params);
+    this.site = new require('./lib/site')(_params);
+    this.domain = new require('./lib/domain')(_params);
+    this.mail = new require('./lib/mail')(_params);
+    this.stat = new require('./lib/stat')(_params);
 
 
     return this;
