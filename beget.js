@@ -35,6 +35,18 @@ module.exports = function BegetAPI(login, password, params) {
     this.getAccountInfo = user.getAccountInfo;
     this.toggleSsh = user.toggleSsh;
 
+    /** mail */
+    this.getMailboxList             = mail.getMailboxList;
+    this.changeMailboxPassword      = mail.changeMailboxPassword;
+    this.createMailbox              = mail.createMailbox;
+    this.dropMailbox                = mail.dropMailbox;
+    this.changeMailboxSettings      = mail.changeMailboxSettings;
+    this.forwardListAddMailbox      = mail.forwardListAddMailbox;
+    this.forwardListDeleteMailbox   = mail.forwardListDeleteMailbox;
+    this.forwardListShow            = mail.forwardListShow;
+    this.setDomainMail              = mail.setDomainMail;
+    this.clearDomainMail            = mail.clearDomainMail;
+
 
     return this;
 
